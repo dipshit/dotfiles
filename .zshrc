@@ -28,10 +28,17 @@ if [ ! -d ~/.zsh-syntax-highlighting ]; then
   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-syntax-highlighting
 fi
 
-source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ ! -d ~/.zsh-autosuggestions ]; then
+  git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.zsh-autosuggestions
+fi
 
-#source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [ ! -d ~/.zsh-history-substring-search ]; then
+  git clone https://github.com/zsh-users/zsh-history-substring-search.git ~/.zsh-history-substring-search
+fi
+
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #kubectl-short-aliases
 alias k=kubectl
