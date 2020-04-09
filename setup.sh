@@ -7,7 +7,6 @@ dotfiles="
 .tmux.conf
 .zshrc
 .gitconfig
-.gitignore_global
 .config/nvim
 .config/alacritty
 .config/tmux"
