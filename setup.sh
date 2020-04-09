@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Setup ohmyzsh
 
@@ -9,7 +9,7 @@ fi
 # Setup vim-plug
 
 if [ ! -f ~/.vim/autoload/plug.vim ]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+  curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
@@ -29,7 +29,7 @@ mkdir -p $backup
 echo "Backup dir: $backup"
 
 # Setup config
-mkdir ~/.config
+mkdir -p ~/.config
 
 for dotfile in $dotfiles; do
   # move backups
