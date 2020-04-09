@@ -9,7 +9,8 @@ dotfiles="
 .gitconfig
 .gitignore_global
 .config/nvim
-.config/alacritty"
+.config/alacritty
+.config/tmux"
 
 # Backup
 mkdir -p $backup
