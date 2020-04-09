@@ -2,6 +2,7 @@ DEFAULT_USER=kirin
 export ZSH="$HOME/.oh-my-zsh"
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 export EDITOR=nvim
 
 ZSH_THEME=powerlevel10k/powerlevel10k
