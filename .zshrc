@@ -1,5 +1,5 @@
 DEFAULT_USER=kirin
-export ZSH="/Users/kirin/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 export EDITOR=nvim
@@ -20,12 +20,18 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+#source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+if [ ! -d ~/.zsh-syntax-highlighting ]; then
+  git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh-syntax-highlighting
+fi
+
+source ~/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+#source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+#source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 #kubectl-short-aliases
 alias k=kubectl
