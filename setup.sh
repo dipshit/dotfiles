@@ -1,5 +1,18 @@
 #!/bin/sh
 
+# Setup ohmyzsh
+
+if [ ! -d ~/.oh-my-zsh ]; then
+  curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+fi
+
+# Setup vim-plug
+
+if [ ! -f ~/.vim/autoload/plug.vim ]; then
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi
+
 # Varibles
 backup=~/.dotfiles_backup
 dir="$(pwd)"
