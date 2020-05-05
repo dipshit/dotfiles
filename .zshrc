@@ -46,13 +46,14 @@ alias k=kubectl
 complete -o default -F __start_kubectl k
 
 alias v=nvim
+alias vi=nvim
 alias git=hub
+alias t=tmux
+alias fd=fdfind
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 export PATH="/usr/local/opt/ruby/bin:$PATH"
-
-#export LDFLAGS="-L/usr/local/opt/openssl/lib"
-#export CPPFLAGS="-I/usr/local/opt/openssl/include"
+export JAVA_HOME="/usr/lib/jvm/java-1.14.0-openjdk-amd64"
